@@ -6,8 +6,13 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-  if (msg.content === 'ping') {
-    msg.reply('pong');
+  const args = message.content.trim().split(/ +/g);
+  const command = args.shift().toLowerCase();
+  if (command === 'ping') {
+    msg.reply('pong!');
+  }
+  if (command === 'hi') {
+    msg.reply('bye!');
   }
 });
 
