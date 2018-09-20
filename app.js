@@ -33,6 +33,13 @@ client.on('message', async msg => {
     msg.channel.bulkDelete(fetched)
       .catch(error => msg.reply(`Couldn't delete messages because of: ${error}`));
   }
+  
+  if (command === 'help' || command === 'commands') {
+    msg.reply("In development!")
+  }
+  
+  if (command === 'slowmode') {
+    setLimitPerUser(30,"bad")
 });
 
 client.login(process.env.token);
