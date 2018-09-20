@@ -20,7 +20,7 @@ client.on('message', msg => {
   if (command === 'say') {
     const allowid = [0];
     const sayMessage = args.join(" ");
-    msg.channel.send(sayMessage)
+    msg.channel.send(sayMessage);
 });
 
 client.login(process.env.token);
