@@ -41,7 +41,7 @@ client.on('message', async msg => {
   if (command === 'slowmode') {
     const time = args.shift()
     const reason = args.join(" ");
-    msg.reply(`the limit has been set to ${time} seconds because of ${reason}`);
+    msg.reply(`the limit has been set to ${time} seconds because of ${reason}.`);
     setRateLimitPerUser(time, reason, msg.channel);
   }
 });
