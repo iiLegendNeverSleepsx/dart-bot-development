@@ -47,7 +47,7 @@ client.on('message', async msg => {
         { name: "Utility", value: "`;help` shows the command menu. \n`;ping` shows current ping. \n`;invite` gets the bot and support server invite.", inline: false},
         { name: "Moderation", value: "`;purge <int>` purges the number of messages given.", inline: true},
     ],
-    timestamp: "Requested " + new Date(),
+    timestamp: new Date(),
     footer: {
       icon_url: client.user.avatarURL,
       text: "By SGII2, Lxphere, and Dart"
