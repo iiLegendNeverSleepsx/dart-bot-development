@@ -1,5 +1,5 @@
 {
-  "name": "Chat Slowmode Bot",
+  "name": "chat-slowmode-bot",
   "description": "A bot meant to slow channels chat down.",
   "version": "0.0.0",
   "main": "app.js",
