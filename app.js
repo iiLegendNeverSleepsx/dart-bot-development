@@ -6,7 +6,7 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-  const args = message.content.trim().split(/ +/g);
+  const args = msg.content.trim().split(/ +/g);
   const command = args.shift().toLowerCase();
   if (command === 'ping') {
     msg.reply('pong!');
