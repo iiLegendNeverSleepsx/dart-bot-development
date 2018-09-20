@@ -45,12 +45,35 @@ client.on('message', async msg => {
     description: "Here are the current bot commands:",
     fields: [
         { name: "Utility", value: "`;help` shows the command menu. \n`;ping` shows current ping. \n`;invite` gets the bot and support server invite.", inline: false},
-        { name: "Moderation", value: "`;purge <int>` purges the number of messages given.", inline: true},
+        { name: "Moderation", value: "`;purge <int>` purges the number of messages given.", inline: false},
+        { name: "Need Help?", value: "Run `;invite` in the server with this bot to get the support server invite.", inline: false}
     ],
     timestamp: new Date(),
     footer: {
       icon_url: client.user.avatarURL,
-      text: "By SGII2, Lxphere, and Dart"
+      text: "By <@258706134850863106>, Lxphere, and Dart"
+    }
+  }
+});
+  }
+  
+  if (command === 'invite') {
+    msg.channel.send({embed: {
+    color: 3447003,
+    author: {
+      name: client.user.username,
+      icon_url: client.user.avatarURL
+    },
+    title: "Invite",
+    description: "Dart Bot coded by SGII2, Lxphere, and Dart.",
+    fields: [
+        { name: "Support Server", value: "You may join the support server [here](https://discord.gg/CKwfTW8).", inline: false},
+        { name: "Bot Invite", value: "You may not invite me yet! I am in development.", inline: false},
+    ],
+    timestamp: new Date(),
+    footer: {
+      icon_url: client.user.avatarURL,
+      text: "By <@258706134850863106>, Lxphere, and Dart"
     }
   }
 });
