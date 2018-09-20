@@ -23,7 +23,7 @@ client.on('message', async msg => {
     msg.channel.send(sayMessage);
   }
   
-  if(command === 'purge' || command === 'clean' || command = 'clear') {
+  if(command === 'purge' || command === 'clean' || command === 'clear') {
     const deleteCount = parseInt(args[0], 10);
     
     if(!deleteCount || deleteCount < 2 || deleteCount > 10000)
