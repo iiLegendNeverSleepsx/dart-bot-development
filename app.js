@@ -3,7 +3,7 @@ const client = new Discord.Client();
 
 let prefix = ";";
 
-const developers = ['29306039910688358400', '25870613485086310600', '39586045138200166500'];
+const developers = ['293060399106883584', '258706134850863106', '395860451382001665'];
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
