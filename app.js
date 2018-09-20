@@ -3,6 +3,8 @@ const client = new Discord.Client();
 
 let prefix = ";";
 
+const developers = [293060399106883584, 258706134850863106, 395860451382001665];
+
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
@@ -82,8 +84,9 @@ client.on('message', async msg => {
   }
   
     if (command === 'sende') {
+    if (developers.includes(msg.author.id)) {
     const code = args.shift()
-    if (code === process.env.rulesembedkey) {
+    if (code === "rules") {
     msg.channel.send({embed: {
     color: 3447003,
     author: {
@@ -107,7 +110,7 @@ client.on('message', async msg => {
       text: "By SGII2, Lxphere, and Dart"
     }
   }
-}); msg.channel.send("Sent embed: `rules`!");} else {msg.reply(`the embed key you sent: "${code}" is not a valid embed key.`);}
+}); msg.channel.send("Sent embed: `rules`!");} else {msg.reply(`the embed key you sent: "${code}" is not a valid embed key. Embed keys: "rules"`);} else {msg.reply("this command is only for developers!")}}
   }
   
   if (command === 'slowmode') {
