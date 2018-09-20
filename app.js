@@ -107,7 +107,7 @@ client.on('message', async msg => {
       text: "By SGII2, Lxphere, and Dart"
     }
   }
-}); msg.channel.send("Sent embed: `rules`!");} else {msg.reply(`the embed key you sent: "${code}" is not a valid embed key.);}
+}); msg.channel.send("Sent embed: `rules`!");} else {msg.reply(`the embed key you sent: "${code}" is not a valid embed key.`);}
   }
   
   if (command === 'slowmode') {
