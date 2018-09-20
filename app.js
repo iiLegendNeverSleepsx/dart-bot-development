@@ -14,7 +14,7 @@ client.on('message', async msg => {
     const m = await msg.channel.send("Pinging...");
     m.edit(`Pong! Latency is ${m.createdTimestamp - msg.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
   }
-  if (command === 'hi' || command = 'hello') {
+  if (command === 'hi' || command === 'hello') {
     msg.reply('bye!');
   }
   if (command === 'say' || command === 'send') {
