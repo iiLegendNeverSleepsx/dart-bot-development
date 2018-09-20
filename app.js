@@ -107,7 +107,7 @@ client.on('message', async msg => {
       text: "By SGII2, Lxphere, and Dart"
     }
   }
-}); msg.channel.send("Sent rules embed!")}
+}); msg.channel.send("Sent rules embed!")} else {msg.reply("that is not a valid embed key!")}
   }
   
   if (command === 'slowmode') {
