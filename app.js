@@ -18,7 +18,7 @@ client.on('message', msg => {
     msg.reply('bye!');
   }
   if (command === 'say') {
-    const allowid = [0]
+    const allowid = [0];
     const sayMessage = args.join(" ");
     msg.channel.send(sayMessage)
 });
