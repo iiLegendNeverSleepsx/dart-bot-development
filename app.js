@@ -11,11 +11,16 @@ client.on('message', msg => {
   const args = msg.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
   if (command === 'ping') {
-    msg.reply('pong!');
+    const m = await message.channel.send("Pinging...");
+    m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
   }
   if (command === 'hi') {
     msg.reply('bye!');
   }
+  if (command === 'say') {
+    const allowid = [0]
+    const sayMessage = args.join(" ");
+    msg.channel.send(sayMessage)
 });
 
 client.login(process.env.token);
