@@ -39,7 +39,10 @@ client.on('message', async msg => {
   }
   
   if (command === 'slowmode') {
-    setLimitPerUser(30,"bad")
+    const time = args.shift();
+    const reason = args.join(" ");
+    setLimitPerUser(time, reason);
+  }
 });
 
 client.login(process.env.token);
