@@ -17,21 +17,21 @@ client.on('message', async msg => {
   if (command === 'hi' || command = 'hello') {
     msg.reply('bye!');
   }
-  if (command === 'say' || command === "send") {
+  if (command === 'say' || command === 'send') {
     const allowid = [0];
     const sayMessage = args.join(" ");
     msg.channel.send(sayMessage);
   }
   
-  if(command === "purge" || command === "clean" || command = "clear") {
+  if(command === 'purge' || command === 'clean' || command = 'clear') {
     const deleteCount = parseInt(args[0], 10);
     
     if(!deleteCount || deleteCount < 2 || deleteCount > 10000)
-      return message.reply("Please provide a number between 2 and 10,000 for the number of messages to delete");
+      return msg.reply("please provide a number between 2 and 10,000 for the number of messages to delete!");
     
-    const fetched = await message.channel.fetchMessages({limit: deleteCount});
-    message.channel.bulkDelete(fetched)
-      .catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
+    const fetched = await msg.channel.fetchMessages({limit: deleteCount});
+    msg.channel.bulkDelete(fetched)
+      .catch(error => msg.reply(`Couldn't delete messages because of: ${error}`));
   }
 });
 
