@@ -2,9 +2,9 @@
   "name": "chat-slowmode-bot",
   "description": "A bot meant to slow channels chat down.",
   "version": "0.0.0",
-  "main": "./app.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node ./app.js"
+    "start": "node app.js"
   },
   "dependencies": {
     "discord.js": "11.1.0",
