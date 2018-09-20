@@ -21,6 +21,7 @@ client.on('message', msg => {
     const allowid = [0];
     const sayMessage = args.join(" ");
     msg.channel.send(sayMessage);
+  }
 });
 
 client.login(process.env.token);
