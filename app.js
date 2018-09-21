@@ -130,8 +130,9 @@ client.on('message', async msg => {
   }
   
   if (command === 'setactivity' || command === 'sa') {
+    const statust = args.shift()
     const status = args.join(" ");
-    client.bot.setActivity(status.shift(), status);
+    client.bot.setActivity(statust, status);
     msg.channel.send(`New status set to: **${status}**.`);
   }
 });
