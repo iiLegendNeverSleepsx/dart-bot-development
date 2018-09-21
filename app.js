@@ -119,6 +119,11 @@ client.on('message', async msg => {
     msg.reply(`the limit has been set to ${time} seconds because of ${reason}.`);
     msg.channel.setRateLimitPerUser(time, reason);
   }
+  
+  if (command === 'setstatus' || command === 'ss') {
+    const status = args.join(" ");
+    client.user.setStatus(status);
+  }
 });
 
 client.login(process.env.token);
