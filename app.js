@@ -34,7 +34,7 @@ client.on("message", async message => {
 	let args = messageArray
 
 	let commandfile = bot.commands.get(cmd.slice(prefix.length));
-	if (commandfile) commandfile.run(bot,message,args)
+	if (commandfile) commandfile.run(bot,message,args);
 });
 
 client.login(process.env.token);
