@@ -23,6 +23,7 @@ module.exports.help = {
 	name: "warn",
 	usage: "warn <user> [reason]",
 	description: "warns a user",
-	longdes: "Warns the user mentioned, a custom reason may be added.",
-	mentionedperm: "MANAGE_MESSAGES"
+	longdes: "Warns the user given along with a reason.",
+	mentionedperm: "MANAGE_MESSAGES",
+  category: "Utility"
 }
