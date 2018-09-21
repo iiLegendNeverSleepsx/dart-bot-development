@@ -2,8 +2,8 @@ const Discord = require("discord.js");
 const fs = require("fs");
 
 module.exports.run = async (bot, message, args) => {
-  if message.member.hasPermission("MANAGE_MESSAGES") {
-  const count = args.shift()
+  if (message.member.hasPermission("MANAGE_MESSAGES")) {
+  const count = args.shift();
   message.channel.bulkDelete(count).then(() => {
   message.channel.send(`Deleted **${count}** messages!).then(msg => msg.delete(3000));
 });
