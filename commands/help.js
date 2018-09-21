@@ -24,6 +24,8 @@ module.exports.run = async (bot, message, args) => {
 	});
  })
 	
+	console.log(embedutility);
+	
 message.author.send({embed: {
     color: 3447003,
     author: {
