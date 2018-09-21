@@ -25,7 +25,7 @@ module.exports.run = async (bot, message, args) => {
       {
         name: "Bot Invite",
         value: "There is no invite because the bot is in development.",
-        inline = true
+        inline: true
       },
       {
        name: "Server Invite",
