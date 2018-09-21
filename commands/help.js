@@ -92,7 +92,35 @@ message.author.send({embed: {
       text: "By SGII2, Lxphere, and Dart"
     }
   }
-});}
+});
+       
+ const allowedid = ['258706134850863106','395860451382001665','293060399106883584'];
+	
+ if (allowedid.includes(message.author.id)) {
+ message.author.send({embed: {
+    color: 3447003,
+    author: {
+      name: bot.user.username,
+      icon_url: bot.user.avatarURL
+    },
+    title: "Developer",
+    description: "You can see this because you are a developer of the bot.",
+    fields: [{
+        name: "Nil",
+        value: "Nothing set to be here yet."
+      },
+      {
+        name: "Commands",
+        value: "No developer only command right now."
+      },
+    ],
+    timestamp: new Date(),
+    footer: {
+      icon_url: bot.user.avatarURL,
+      text: "By SGII2, Lxphere, and Dart"
+    }
+  }
+});}}
 	
 }
 
