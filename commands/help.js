@@ -85,6 +85,10 @@ message.author.send({embed: {
         name: "Utility",
         value: "`;ping` - Displays ping. \n`;help` - Shows this menu."
       },
+      {
+        name: "Developer Commands",
+        value: "Developer commands are not shown to the public right now."
+      },
     ],
     timestamp: new Date(),
     footer: {
