@@ -30,7 +30,7 @@ client.on("message", async message => {
 
 	let prefix = ";";
 	let messageArray = message.content.split(" ");
-	let cmd = messageArray.shift()
+	let cmd = messageArray.shift();
 	let args = messageArray
 
 	let commandfile = client.commands.get(cmd.slice(prefix.length));
