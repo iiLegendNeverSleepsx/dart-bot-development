@@ -64,7 +64,7 @@ module.exports.run = async (bot, message, args) => {
     timestamp: new Date(),
     footer: {
       icon_url: bot.user.avatarURL,
-      text: "Embed key: rules"
+      text: "Embed key: update"
     }
   }
 });}  else {message.reply("invalid key. The current embed keys are: `['rules', 'update <upd>']`");}} else {message.reply("error! You do not have permission to use this command! You need to be a bot developer!");}
