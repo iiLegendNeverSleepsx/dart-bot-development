@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const fs = require("fs");
 const ms = require("ms");
-let warns = JSON.parse(fs.readFileSync("../infractions.json","utf8"));
+let warns = JSON.parse(fs.readFileSync("./infractions.json","utf8"));
 
 module.exports.run = async (bot, message, args) => {
 	if (!message.member.hasPermission("MANAGE_MEMBERS")) return message.reply("it doesn't look like you can use that!");
@@ -16,9 +16,9 @@ module.exports.run = async (bot, message, args) => {
 
 	warns[wUser.id].warns++;
 
-	fs.writeFile("../infractions.json", JSON.stringify(warns) (err) => {
+	fs.writeFile("./infractions.json", JSON.stringify(warns) (err) => {
 		if (err) console.log(err);
-	})
+	});
 
 	let warnEmbed = new Discord.RichEmbed()
 	.setDescription("Infraction Given")
