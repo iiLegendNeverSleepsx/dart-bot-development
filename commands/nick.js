@@ -8,14 +8,12 @@ module.exports.run = async (bot, message, args) => {
     let member = message.mentions.members.first() || message.guild.members.get(args[0]);
     if(!member)
       return message.reply("please mention a valid member of this server");
-    if(!member.kickable) 
-      return message.reply("I cannot nickname this user! Do they have a higher role? Do I have nickname permissions?");
     
     let reason = args.slice(1).join(' ');
     if(!reason) reason = "nil; aE00o6a2i1";
     
     await member.setNickname(reason)
-      .catch(error => message.reply(`sorry ${message.author}, I couldn't kick because of : ${error}`));
+      .catch(error => message.reply(`sorry ${message.author}, I couldn't nickname because of : ${error}`));
     message.channel.send(`${member.user.tag}'s nickname successfully set to **${reason}**!`);
 }
 
