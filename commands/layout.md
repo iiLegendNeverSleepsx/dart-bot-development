@@ -1,4 +1,6 @@
 # Command Layout
+> Be sure to edit to get the spaces
+
 
 const Discord = require("discord.js");
 const fs = require("fs");
