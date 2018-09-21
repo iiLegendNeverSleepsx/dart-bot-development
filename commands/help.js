@@ -79,7 +79,7 @@ message.author.send({embed: {
     description: "Commands for Dart Bot",
     fields: [{
         name: "Moderation",
-        value: "`;warn` - Warns the user given. \n`;say` - Sends a message as the bot."
+        value: "`;warn` - Warns the user given. \n`;say` - Sends a message as the bot. \n`;purge` - Clears the amount of messages given."
       },
       {
         name: "Utility",
