@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const fs = require("fs");
 
 module.exports.run = async (bot, message, args) => {
-    if (message.guildmember.hasPermission("MANAGE_MESSAGES")) {
+    if (message.member.hasPermission("MANAGE_MESSAGES")) {
       const sayMessage = args.join(" ");
       message.channel.send(sayMessage);
       message.delete();
