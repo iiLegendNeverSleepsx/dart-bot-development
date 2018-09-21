@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
       return message.reply("please mention a valid member of this server");
     
     let reason = args.slice(1).join(' ');
-    if(!reason) reason = "nil; aE00o6a2i1";
+    if(!reason) reason = "";
     
     await member.setNickname(reason)
       .catch(error => message.reply(`sorry ${message.author}, I couldn't nickname because of : ${error}`));
