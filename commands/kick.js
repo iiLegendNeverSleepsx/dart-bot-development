@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.help = {
 	name: "kick",
-	usage: "sende <user> [reason]",
+	usage: "kick <user> [reason]",
 	description: "nil",
 	longdes: "Kicks the user given.",
 	mentionedperm: "KICK_MEMBERS",
