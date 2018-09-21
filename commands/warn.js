@@ -5,7 +5,7 @@ let warns = JSON.parse(fs.readFileSync("./infractions.json","utf8"));
 module.exports.run = async (bot, message, args) => {
 	if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("it doesn't look like you can use that!");
 	let wUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
-	if (!wUser) return message.reply(" that member can't be found!");
+	if (!wUser) return message.reply("that member can't be found!");
 	if (wUser.hasPermission("MANAGE_MESSAGES") || wUser.hasPermission("ADMINISTRATOR")) return message.reply("can't warn that user!");
 	let reason = args.join(" ").slice(22);
 
@@ -25,7 +25,7 @@ module.exports.run = async (bot, message, args) => {
 	.addField("Reason:", reason)
 	.addField("Number of Infractions:", warns[wUser.id].warns)
 
-	message.channel.send(warnEmbed);
+	message.channel.send({warnEmbed});
 }
 
 module.exports.help = {
