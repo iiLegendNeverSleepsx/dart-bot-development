@@ -16,16 +16,7 @@ module.exports.run = async (bot, message, args) => {
 	warns[wUser.id].warns++;
 
 	fs.writeFile("./infractions.json", JSON.stringify(warns));
-
-	let warnEmbed = new Discord.RichEmbed()
-	.setDescription("Infraction Given")
-	.setAuthor(message.author.username)
-	.setColor("#fc6500")
-	.addField("User:", wUser.tag)
-	.addField("Reason:", reason)
-	.addField("Number of Infractions:", warns[wUser.id].warns)
-
-	message.channel.send({warnEmbed});
+	message.channel.send(`${message.author.username} warned ${wUser.tag} because of **${reason}**. (Infractions for user: ${warns[wUser.id].warns})
 }
 
 module.exports.help = {
