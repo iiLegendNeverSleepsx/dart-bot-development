@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args) => {
 	}
 
 	jsfile.forEach((f, i) => {
-		let props = require(`./commands/${f}`);
+		let props = require(`../commands/${f}`);
 		if (props.help.category === "Utility") {
 			embedutility = embedutility + ` \n;${props.help.name} - ${props.description}`
 		} else if (props.help.category === "Moderation") {
