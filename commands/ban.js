@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
     if(!member)
       return message.reply("please mention a valid member of this server");
     if(!member.kickable) 
-      return message.reply("I cannot ban this user! Do they have a higher role? Do I have ban permissions?");
+      return message.reply("I cannot ban this user! Do they have a higher role? **Do I have ban permissions**?");
     
     let reason = args.slice(1).join(' ');
     if(!reason) reason = "no reason provided";
