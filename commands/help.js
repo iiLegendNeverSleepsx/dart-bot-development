@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
 
 const command = args.shift();
 
-if (`../commands/` + $(command) + `.js`) {
+if (`../commands/` + command + `.js`) {
 	fs.readdir("./commands", (err, files) => {
 		let props = require(`../commands/${command}`);
 		message.channel.send({embed: {
