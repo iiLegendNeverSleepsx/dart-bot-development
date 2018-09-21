@@ -10,8 +10,8 @@ module.exports.run = async (bot, message, args) => {
    * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
    */
   .setColor("#00AE86")
-  .setDescription("Whois command/")
-  .setFooter(whoisuser.tag, "http://i.imgur.com/w1vhFSR.png")
+  .setDescription("Whois command")
+  .setFooter("Requested", "http://i.imgur.com/w1vhFSR.png")
   .setThumbnail(whoisuser.avatarURL)
   .setTimestamp()
   .addField("Name", whoisuser.name, true)
