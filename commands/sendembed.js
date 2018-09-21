@@ -20,8 +20,7 @@ module.exports.run = async (bot, message, args) => {
       },
       {
         name: "Information About The Developers:",
-        value: "
-@Dart - \nHello, my name is Dart, I originally started by hosting the bot and coding it, however now I just help out around here with coding. Also, if you need anything personally from me, please contact me at dartdartbot@gmail.com."
+        value: "@Dart - \nHello, my name is Dart, I originally started by hosting the bot and coding it, however now I just help out around here with coding. Also, if you need anything personally from me, please contact me at dartdartbot@gmail.com."
       },
       {
         name: "Bot Invite",
@@ -32,6 +31,7 @@ module.exports.run = async (bot, message, args) => {
        name: "Server Invite",
        value: "https://discord.gg/CKwfTW8",
        inline: true
+      },
     ],
     timestamp: new Date(),
     footer: {
@@ -39,7 +39,7 @@ module.exports.run = async (bot, message, args) => {
       text: "Embed key: rules"
     }
   }
-});} else {message.reply("invalid key. The current embed keys are: `['rules']`")}} else {message.reply("this command is only for developers!")}
+});} else {message.reply("invalid key. The current embed keys are: `['rules']`");}} else {message.reply("this command is only for developers!");}
 }
 
 module.exports.help = {
