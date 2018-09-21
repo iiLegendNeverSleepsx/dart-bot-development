@@ -67,7 +67,7 @@ if (command === 'help' || command === 'ping' || command === 'say' || command ===
       text: "By SGII2, Lxphere, and Dart"
     }
   }
-});
+});})
 } else {message.channel.send("I sent a direct message of the help menu! If you did not get it, enable `Direct Messages from Server Members` and try again.");
 message.author.send({embed: {
     color: 3447003,
