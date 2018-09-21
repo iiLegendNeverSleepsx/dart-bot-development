@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
 const fs = require("fs");
-const moment = require("moment")
 const status = {
   online: "Online",
   idle: "Idle",
@@ -27,8 +26,6 @@ module.exports.run = async (bot, message, args) => {
     .addField("Status", `${status[member.user.presence.status]}`, true)
     .addField("Playing", `${member.user.presence.game ? `${member.user.presence.game.name}` : "not playing anything."}`, true)
     .addField("Roles", `${member.roles.filter(r => r.id !== message.guild.id).map(roles => `\`${roles.name}\``).join(" **|** ") || "No Roles"}`, true)
-    .addField("Joined At", `${moment.utc(member.joinedAt).format("dddd, MMMM Do YYYY, HH:mm:ss")}`, true)
-    .addField("Created At", `${moment.utc(member.user.createdAt).format("dddd, MMMM Do YYYY, HH:mm:ss")}`, true);
 }
 
 module.exports.help = {
