@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
     let reason = args.slice(1).join(' ');
     if(!reason) reason = "nil; aE00o6a2i1";
     
-    await member.kick(reason)
+    await member.setNickname(reason)
       .catch(error => message.reply(`sorry ${message.author}, I couldn't kick because of : ${error}`));
     message.channel.send(`${member.user.tag}'s nickname successfully set to **${reason}**!`);
 }
