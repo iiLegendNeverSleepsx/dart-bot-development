@@ -22,7 +22,7 @@ module.exports.run = async (bot, message, args) => {
 	});
  })
 
-const command = args.shift()	
+const command = args.shift();
 
 if (command === 'help' || command === 'ping' || command === 'say' || command === 'warn') {
 	fs.readdir("./commands", (err, files) => {
