@@ -23,10 +23,50 @@ module.exports.run = async (bot, message, args) => {
 		}
 	});
  })
-	
-	console.log(embedutility);
-	
-message.author.send({embed: {
+
+const command = args.shift()	
+
+if (command === 'help') {
+	fs.readdir("./commands", (err, files) => {
+		let props = require(`../commands/${command}`);
+		message.author.send({embed: {
+    			color: 3447003,
+    			author: {
+      			name: bot.user.username,
+      			icon_url: bot.user.avatarURL
+    			},
+    		title: "Commands",
+    		description: "Commands for Dart Bot",
+    	fields: [{
+        	name: "Name",
+        	value: props.help.name,
+		inline: true
+      	},
+	{
+        	name: "Usage",
+        	value: "`" + props.help.name + "`",
+		inline: true
+      	},
+	{
+        	name: "Required Permission",
+        	value: props.help.mentionedperm,
+		inline: true
+      	},
+	{
+        	name: "Description",
+        	value: props.help.longdes,
+		inline: false
+      	},
+    	],
+    	timestamp: new Date(),
+    footer: {
+      icon_url: bot.user.avatarURL,
+      text: "By SGII2, Lxphere, and Dart"
+    }
+  }
+});
+	})
+} else {message.author.send({embed: {
     color: 3447003,
     author: {
       name: bot.user.username,
@@ -36,11 +76,11 @@ message.author.send({embed: {
     description: "Commands for Dart Bot",
     fields: [{
         name: "Moderation",
-        value: embedmoderation
+        value: "None yet!"
       },
       {
         name: "Utility",
-        value: embedutility
+        value: "`;ping` - Displays ping. \n`;help` - Shows this menu."
       },
     ],
     timestamp: new Date(),
@@ -49,7 +89,7 @@ message.author.send({embed: {
       text: "By SGII2, Lxphere, and Dart"
     }
   }
-});
+});}
 	
 }
 
