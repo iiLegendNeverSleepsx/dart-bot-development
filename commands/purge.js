@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
   if (message.member.hasPermission("MANAGE_MESSAGES")) {
   const count = args.shift();
   message.channel.bulkDelete(count).then(() => {
-  message.channel.send(`Deleted **${count}** messages!).then(msg => msg.delete(3000));
+  message.channel.send(`Deleted **${count}** messages!`).then(msg => msg.delete(3000));
 });
   } else {message.reply("it doesn't look like you can use this.")}
 }
