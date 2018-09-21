@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const fs = require("fs");
 const ms = require("ms");
-let warns = JSON.parse(fs.readFileSync("./warnings.json","utf8"));
+let warns = JSON.parse(fs.readFileSync("../infractions.json","utf8"));
 
 module.exports.run = async (bot, message, args) => {
 	if (!message.member.hasPermission("MANAGE_MEMBERS")) return message.reply("it doesn't look like you can use that!")
@@ -32,6 +32,6 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-	name: "warn"
+	name: "warn",
 	usage: "warn <user> [reason]"
 }
