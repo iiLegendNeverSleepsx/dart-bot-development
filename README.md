@@ -1,3 +1,3 @@
-# Chat Slowmode Bot
+# Dart Bot Development
 
-A simple bot coded by **SGII2** to slow a channel's chat down. Made with discord.js.
+A bot where everything for **Dart Bot** was first created. Later moved to testing bot, then beta bot. then public bot.
