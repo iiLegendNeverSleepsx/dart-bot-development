@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-	name: "ban justin",
+	name: "banjustin",
 	usage: "banjustin",
 	description: "none",
 	longdes: "Bans the user 'justin#1337'",
