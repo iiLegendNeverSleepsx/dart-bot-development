@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args) => {
   .setTimestamp()
   .addField("Name", whoisuser.name, true)
   .addField("Discriminator", whoisuser.discriminator, true)
-  .addField("ID", whoisuser.ID);
+  .addField("ID", whoisuser.ID)
   .addField("Created At", whoisuser.createdTimestamp)
 
   message.channel.send({embed});
