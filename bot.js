@@ -28,7 +28,7 @@ client.on("message", async message => {
 
 	if (message.author.bot) return;
 
-	let prefix = ";;";
+	let prefix = "!";
 	let messageArray = message.content.split(" ");
 	let cmd = messageArray.shift();
 	let args = messageArray
@@ -37,4 +37,4 @@ client.on("message", async message => {
 	if (commandfile) commandfile.run(client,message,args);
 });
 
-client.login(process.env.token);
+client.login(process.env.BOT_T0KEN);
