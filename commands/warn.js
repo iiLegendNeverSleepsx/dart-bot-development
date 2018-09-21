@@ -16,10 +16,13 @@ module.exports.run = async (bot, message, args) => {
 	warns[wUser.id].warns++;
 
 	fs.writeFile("./infractions.json", JSON.stringify(warns));
-	message.channel.send(`${message.author.username} warned ${wUser.tag} because of **${reason}**. (Infractions for user: ${warns[wUser.id].warns}`)
+	message.channel.send(`${message.author.username} warned ${wUser.tag} because of **${reason}**. (Infractions for user: ${warns[wUser.id].warns})`)
 }
 
 module.exports.help = {
 	name: "warn",
-	usage: "warn <user> [reason]"
+	usage: "warn <user> [reason]",
+	description: "warns a user",
+	longdes: "Warns the user mentioned, a custom reason may be added.",
+	mentionedperm: "MANAGE_MESSAGES"
 }
