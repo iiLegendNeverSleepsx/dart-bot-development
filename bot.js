@@ -28,7 +28,7 @@ client.on("message", async message => {
 
 	if (message.author.bot) return;
 
-	let prefix = "!";
+	let prefix = ";;";
 	let messageArray = message.content.split(" ");
 	let cmd = messageArray.shift();
 	let args = messageArray
