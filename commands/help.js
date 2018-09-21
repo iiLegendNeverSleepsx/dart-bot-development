@@ -27,7 +27,7 @@ const command = args.shift()
 if (command === 'help' || command === 'ping') {
 	fs.readdir("./commands", (err, files) => {
 		let props = require(`../commands/${command}`);
-		message.author.send({embed: {
+		message.channel.send({embed: {
     			color: 3447003,
     			author: {
       			name: bot.user.username,
