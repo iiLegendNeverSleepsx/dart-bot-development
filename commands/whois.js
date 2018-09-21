@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
     const whoisuser = message.mentions.members.first();
     const embed = new Discord.RichEmbed()
   .setTitle("Who Is")
-  .setAuthor("Dart Bot", bot.user.avatar)
+  .setAuthor("Dart Bot", bot.user.avatarURL)
   /*
    * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
    */
