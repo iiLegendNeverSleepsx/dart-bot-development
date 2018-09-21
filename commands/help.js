@@ -119,7 +119,7 @@ message.author.send({embed: {
       },
       {
         name: "Commands",
-        value: "`;sende` - Send embed. Say the command by itself to see embed keys. \n`;eval` - Evals code."
+        value: "`;sende` - Send embed. Say the command by itself to see embed keys. \n`;eval` - Evals code. \n`;setname` - Set the bot's username."
       },
     ],
     timestamp: new Date(),
