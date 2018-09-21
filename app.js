@@ -121,8 +121,8 @@ client.on('message', async msg => {
   }
   
   if (command === 'setstatus' || command === 'ss') {
-    const status = args.join(` `);
-    client.user.setActivity(status);
+    const status = args.join(' ');
+    client.user.setStatus('dnd', status) 
     msg.channel.send(`New status set to: **${status}**.`);
   }
 });
