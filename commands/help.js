@@ -4,9 +4,7 @@ var embedutility = ``;
 var embedmoderation = ``;
 var embeddev = ``;
 
-module.exports.run = async (bot, message, args) => {
-  message.channel.send("I sent a direct message of the help menu! If you did not get it, enable `Direct Messages from Server Members` and try again.")
-	
+module.exports.run = async (bot, message, args) => {	
  fs.readdir("./commands", (err, files) => {
 	if (err) console.log(err);
 	let jsfile = files.filter(f => f.split(".").pop() === "js")
@@ -66,7 +64,8 @@ if (command === 'help' || command === 'ping') {
   }
 });
 	})
-} else {message.author.send({embed: {
+} else { message.channel.send("I sent a direct message of the help menu! If you did not get it, enable `Direct Messages from Server Members` and try again.")
+message.author.send({embed: {
     color: 3447003,
     author: {
       name: bot.user.username,
