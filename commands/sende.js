@@ -67,7 +67,7 @@ module.exports.run = async (bot, message, args) => {
       text: "Embed key: update"
     }
   }
-});}  else {message.reply("invalid key. The current embed keys are: `['rules', 'update <upd>']`");}} else {message.reply("error! You do not have permission to use this command! You need to be a bot developer!");}
+}); message.delete();}  else {message.reply("invalid key. The current embed keys are: `['rules', 'update <upd>']`");}} else {message.reply("error! You do not have permission to use this command! You need to be a bot developer!");}
 }
 
 module.exports.help = {
