@@ -3,7 +3,7 @@ const fs = require("fs");
 
 module.exports.run = async (bot, message, args) => {
     if(!message.member.hasPermission("MANAGE_NICKNAMES") || !message.member.hasPermission("ADMINISTRATOR"))
-      return message.reply("it doesn't look like you can use that.");
+      return message.reply("error! You do not have permission to use this command! You need the `MANAGE_NICKNAMES` permission!");
     
     let member = message.mentions.members.first() || message.guild.members.get(args[0]);
     if(!member)
