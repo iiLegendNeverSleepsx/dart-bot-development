@@ -1,6 +1,6 @@
 # Command Layout
 
-`const Discord = require("discord.js");
+const Discord = require("discord.js");
 const fs = require("fs");
 
 module.exports.run = async (bot, message, args) => {
@@ -14,4 +14,4 @@ module.exports.help = {
 	longdes: "A description that is found in ;help <command>",
 	mentionedperm: "PERMISSION_REQUIRED",
   category: "none"
-}`
+}
