@@ -44,7 +44,7 @@ message.author.send({embed: {
     ],
     timestamp: new Date(),
     footer: {
-      icon_url: client.user.avatarURL,
+      icon_url: bot.user.avatarURL,
       text: "By SGII2, Lxphere, and Dart"
     }
   }
