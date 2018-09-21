@@ -17,11 +17,10 @@ module.exports.run = async (bot, message, args) => {
 	jsfile.forEach((f, i) => {
 		let props = require(`../commands/${f}`);
 		if (props.help.category === "Utility") {
-			embedutility = embedutility + ` \n ;${props.help.name} - ${props.description}`
+			embedutility = embedutility + ` \n ;${props.help.name} - ${props.help.description}`
 		} else if (props.help.category === "Moderation") {
-			embedmoderation = embedmoderation + ` \n ;${props.help.name} - ${props.description}`
+			embedmoderation = embedmoderation + ` \n ;${props.help.name} - ${props.help.description}`
 		}
-		bot.commands.set(props.help.name, props);
 	});
  })
 	
