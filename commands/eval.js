@@ -22,7 +22,7 @@ module.exports.run = async (bot, message, args) => {
     } catch (err) {
       message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
     }
-  }
+  } else {message.reply("that command is for developers only!")}
 }
 
 module.exports.help = {
