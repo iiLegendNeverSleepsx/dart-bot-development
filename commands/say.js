@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
       const sayMessage = args.join(" ");
       message.channel.send(sayMessage);
       message.delete();
-    } else {message.reply("it doesn't look like you can use that!")}
+    } else {message.reply("error! You do not have permission to use this command! You need the `MANAGE_MESSAGES` permission!")}
 }
 
 module.exports.help = {
