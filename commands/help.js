@@ -79,7 +79,7 @@ message.author.send({embed: {
     description: "Commands for Dart Bot",
     fields: [{
         name: "Moderation",
-        value: "`;warn` - Warns the user given. \n`;say` - Sends a message as the bot. \n`;purge` - Clears the amount of messages given."
+        value: "`;warn` - Warns the user given. \n`;say` - Sends a message as the bot. \n`;purge` - Clears the amount of messages given. \n`;kick` - Kicks the user given. \n`;ban` - Bans the user given."
       },
       {
         name: "Utility",
@@ -88,6 +88,10 @@ message.author.send({embed: {
       {
         name: "Developer Commands",
         value: "Developer commands are not shown to the public right now."
+      },
+      {
+        name: "Command Descriptions",
+        value: "Type `;help <command>` here in this DM to get information on a command."
       },
     ],
     timestamp: new Date(),
