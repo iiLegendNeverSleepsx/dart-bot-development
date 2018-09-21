@@ -128,6 +128,12 @@ client.on('message', async msg => {
     msg.channel.send(`New status set to: **${status}**.`);
     }
   }
+  
+  if (command === 'setactivity' || command === 'sa') {
+    const status = args.join(" ");
+    client.user.setActivity(status);
+    msg.channel.send(`New status set to: **${status}**.`);
+  }
 });
 
 client.login(process.env.token);
