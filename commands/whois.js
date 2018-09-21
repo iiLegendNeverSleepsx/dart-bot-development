@@ -26,6 +26,10 @@ module.exports.run = async (bot, message, args) => {
     .addField("Status", `${status[member.user.presence.status]}`, true)
     .addField("Playing", `${member.user.presence.game ? `${member.user.presence.game.name}` : "not playing anything."}`, true)
     .addField("Roles", `${member.roles.filter(r => r.id !== message.guild.id).map(roles => `\`${roles.name}\``).join(" **|** ") || "No Roles"}`, true)
+
+  message.channel.send({
+    embed
+  });
 }
 
 module.exports.help = {
