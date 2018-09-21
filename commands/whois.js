@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const fs = require("fs");
+const moment = require("moment")
 const status = {
   online: "Online",
   idle: "Idle",
@@ -7,14 +8,14 @@ const status = {
   offline: "Offline/Invisible"
 };
 
-module.exports.run = async (client, message, args) => {
+module.exports.run = async (bot, message, args) => {
   const member = message.mentions.members.first() || message.guild.members.get(args[0]) || message.member;
   if (!member) return message.reply("Please provide a vaild Mention or USER ID");
-  let bot;
+  let isbot;
   if (member.user.bot === true) {
-    bot = "Yes";
+    isbot = "Yes";
   } else {
-    bot = "No";
+    isbot = "No";
   }
   const embed = new Discord.MessageEmbed()
     .setColor(3447003)
@@ -25,7 +26,7 @@ module.exports.run = async (client, message, args) => {
     .addField("Guild", `${bot}`, true)
     .addField("Status", `${status[member.user.presence.status]}`, true)
     .addField("Playing", `${member.user.presence.game ? `${member.user.presence.game.name}` : "not playing anything."}`, true)
-    .addField("Roles", `${member.roles.filter(r => r.id !== msg.guild.id).map(roles => `\`${roles.name}\``).join(" **|** ") || "No Roles"}`, true)
+    .addField("Roles", `${member.roles.filter(r => r.id !== message.guild.id).map(roles => `\`${roles.name}\``).join(" **|** ") || "No Roles"}`, true)
     .addField("Joined At", `${moment.utc(member.joinedAt).format("dddd, MMMM Do YYYY, HH:mm:ss")}`, true)
     .addField("Created At", `${moment.utc(member.user.createdAt).format("dddd, MMMM Do YYYY, HH:mm:ss")}`, true);
 }
