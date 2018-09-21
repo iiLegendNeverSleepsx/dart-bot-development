@@ -12,6 +12,7 @@ client.on('ready', () => {
 client.on('message', async msg => {
   const args = msg.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
+  if(msg.content.indexOf(prefix) !== 0) return;
   if (command === 'ping') {
     const m = await msg.channel.send("Pinging...");
     m.edit(`Pong! Latency is ${m.createdTimestamp - msg.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
