@@ -42,7 +42,7 @@ if (command === 'help' || command === 'ping' || command === 'say' || command ===
       	},
 	{
         	name: "Usage",
-        	value: "`" + props.help.name + "`",
+        	value: "`;" + props.help.usage + "`",
 		inline: true
       	},
 	{
