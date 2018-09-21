@@ -115,7 +115,7 @@ message.author.send({embed: {
       },
       {
         name: "Commands",
-        value: "No developer only command right now."
+        value: "`;sende` - Send embed. Say the command by itself to see embed keys."
       },
     ],
     timestamp: new Date(),
