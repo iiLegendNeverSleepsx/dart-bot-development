@@ -21,15 +21,15 @@ module.exports.run = async (bot, message, args) => {
 		} else if (props.help.category === "Moderation") {
 			embedmoderation = embedmoderation + ` \n;${props.help.name} - ${props.description}`
 		}
-		client.commands.set(props.help.name, props);
+		bot.commands.set(props.help.name, props);
 	});
  })
 	
 message.author.send({embed: {
     color: 3447003,
     author: {
-      name: client.user.username,
-      icon_url: client.user.avatarURL
+      name: bot.user.username,
+      icon_url: bot.user.avatarURL
     },
     title: "Commands",
     description: "Commands for Dart Bot",
