@@ -1,8 +1,8 @@
 const Discord = require("discord.js");
 const fs = require("fs");
-var embedutility = "";
-var embedmoderation = "";
-var embeddev = "";
+var embedutility = ``;
+var embedmoderation = ``;
+var embeddev = ``;
 
 module.exports.run = async (bot, message, args) => {
   message.channel.send("I sent a direct message of the help menu! If you did not get it, enable `Direct Messages from Server Members` and try again.")
