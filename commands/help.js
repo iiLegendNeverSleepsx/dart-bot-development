@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
 
 const command = args.shift()	
 
-if (command === 'help' || command === 'ping') {
+if (command === 'help' || command === 'ping' || command === 'say' || command === 'warn') {
 	fs.readdir("./commands", (err, files) => {
 		let props = require(`../commands/${command}`);
 		message.channel.send({embed: {
@@ -51,9 +51,14 @@ if (command === 'help' || command === 'ping') {
 		inline: true
       	},
 	{
+		name: "Category",
+		value: props.help.category,
+		inline: true
+	},
+	{
         	name: "Description",
         	value: props.help.longdes,
-		inline: false
+		inline: true
       	},
     	],
     	timestamp: new Date(),
@@ -75,7 +80,7 @@ message.author.send({embed: {
     description: "Commands for Dart Bot",
     fields: [{
         name: "Moderation",
-        value: "None yet!"
+        value: "`;warn` - Warns the user given. \n`;say` - Sends a message as the bot."
       },
       {
         name: "Utility",
