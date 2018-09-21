@@ -122,8 +122,11 @@ client.on('message', async msg => {
   
   if (command === 'setstatus' || command === 'ss') {
     const status = args.join(" ");
-    client.user.setStatus('dnd', status);
+    const allowedstatus = ["dnd", "online", "invisible", "away"];
+    if (! allowedstatus.includes(status)) {msg.reply(`The status you chose: $(status) is not valid. Status can be: dnd, online, invisible, away`)} else {
+    client.user.setStatus(status);
     msg.channel.send(`New status set to: **${status}**.`);
+    }
   }
 });
 
