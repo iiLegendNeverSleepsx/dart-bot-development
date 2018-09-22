@@ -47,27 +47,27 @@ module.exports.run = async (bot, message, args) => {
       text: "Embed key: rules"
     }
   }
-});} else if (key === 'update') {
+});} else if (key === 'announce') {
 	  message.channel.send({embed: {
     color: 3447003,
     author: {
       name: bot.user.username,
       icon_url: bot.user.avatarURL
     },
-    title: "Dart Bot",
-    description: "I was recently updated!",
+    title: "Dart Bot Local",
+    description: "Dart Bot Annoucement",
 	fields: [{
-        name: "What was updated?",
+        name: " ",
         value: args.join(" ")
 	},
     ],
     timestamp: new Date(),
     footer: {
       icon_url: bot.user.avatarURL,
-      text: "Embed key: update"
+      text: "Embed key: announce"
     }
   }
-}); message.delete();}  else {message.reply("invalid key. The current embed keys are: `['rules', 'update <upd>']`");}} else {message.reply("error! You do not have permission to use this command! You need to be a bot developer!");}
+}); message.delete();}  else {message.reply("invalid key. The current embed keys are: `['rules', 'announce <annoucement txt>']`");}} else {message.reply("error! You do not have permission to use this command! You need to be a bot developer!");}
 }
 
 module.exports.help = {
