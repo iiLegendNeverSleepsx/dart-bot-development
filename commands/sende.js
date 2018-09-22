@@ -57,7 +57,7 @@ module.exports.run = async (bot, message, args) => {
     title: "Dart Bot Local",
     description: "Dart Bot Annoucement",
 	fields: [{
-        name: " ",
+        name: "Announcement!",
         value: args.join(" ")
 	},
     ],
