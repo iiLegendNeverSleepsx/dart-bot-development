@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+- stable
+deploy:
+  provider: heroku
+  api_key:
+    secure: d0fda5ca-c11b-4f23-b935-4dbcd8228074H3cbJsqVfkt3mZTeu9nAGASf6lYiUtrTWlXWqEUI3kJwjMFUoHh+563Dvjt+bTjOeZ5rxYc8w7XP2tGvMPsaRPPF5dD+yDLYa5KiAHYn4hJcrZ1eKHlLg2gIqVImRBC3TMeWK/yIOV10WUzstpIiung+QCq+eHuHUrD3GtkAKhWrK2RoASw80Gg0LXi4NwG7rBtgaf9NJvyaz6HkThQKYp+JLAybLKXuqbwQLYLoF2uXI6Xcui/S7J1J3BrvwxmuDElkmKc+hcQ31ImP7/0hSnFfPD5kY82VRqPIUz5G0wwQb4JA69gxVa4M+Uh77GfbeRrOrVPEedJuegzgJO3Was6ZEsaLt+5YiqTP9orme0QUtqdmqfokyFCmPsbW79U0gnGDY6BsqEm3+xt/9RIKcK00UT2nqpNXv/YMo5srfU/NuDnrBW2RPihkNx0+oGhzVSt0l2PUBhHgs1p46WhnKPNeutVagKvC4PNzyTtISXSD44mZcI04XfSS2aIlW9MHoM=
+  app: dart-local
+cache:
+  directories:
+  - node_modules
