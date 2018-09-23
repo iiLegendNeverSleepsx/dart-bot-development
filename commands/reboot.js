@@ -4,8 +4,8 @@ module.exports.run = async (bot, message, args) => {
          	 message.react("✅");
                  bot.destroy();
                  bot.login(process.env.BOT_T0KEN);
-                 console.log("${bot.user.tag} has successfully rebooted!");
-	         message.channel.send("All done, I have rebooted my systems!")
+                 .then(() => console.log("${bot.user.tag} has successfully rebooted!");
+	         .then(() => message.channel.send("All done, I have rebooted my systems!")
 	}
 };    
 
