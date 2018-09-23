@@ -8,8 +8,8 @@ module.exports.run = async (bot, message, args) => {
 };    
 
 module.exports.help = {
-    name: "restart",
-    usage: "restart",
+    name: "reboot",
+    usage: "reboot",
     description: "nil",
     longdes: "Restarts the bot.",
     mentionedperm: "DEVELOPER",
