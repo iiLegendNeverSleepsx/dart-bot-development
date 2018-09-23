@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const fs = require("fs"); 
 
 module.exports.run = async (bot, message, args) => {
-    essage.channel.send({embed: {
+    message.channel.send({embed: {
     color: 3447003,
     author: {
       name: client.user.username,
