@@ -1,1 +1,1 @@
-// Deleted! - o m n i 
+bot.login(process.env.BOT_T0KEN)))
