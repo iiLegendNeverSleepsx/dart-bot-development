@@ -4,6 +4,8 @@ module.exports.run = async (bot, message, args) => {
          	 message.react("✅");
                  bot.destroy();
                  bot.login(process.env.BOT_T0KEN);
+	         if (err) console.log(err);
+                 console.log("Couldn't restart the bot!");
 	}
 };    
 
