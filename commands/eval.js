@@ -22,6 +22,22 @@ module.exports.run = async (bot, message, args) => {
     } catch (err) {
       message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
     }
+    const client = bot;
+    message.channel.send({embed: {
+    color: 3447003,
+    description: "\n",
+    fields: [{
+        name: "Evaled!",
+        value: clean(evaled), {code:"xl"},
+      },
+    ],
+    timestamp: new Date(),
+    footer: {
+      icon_url: message.author.avatarURL,
+      text: `Eval ran by ${message.author.tag}`
+    }
+  }
+});
   } else {message.reply("error! You do not have permission to use this command! You need to be a bot developer to use this command!")}
 }
 
