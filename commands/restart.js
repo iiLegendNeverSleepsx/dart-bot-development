@@ -3,7 +3,7 @@ module.exports.run = async (bot, message, args) => {
      if (allowedid.includes(message.author.id)) {
          message.react("✅")
              .then(() => bot.destroy()
-             .then(() => bot.login());
+             .then(() => bot.login()));
     }
 }
 
