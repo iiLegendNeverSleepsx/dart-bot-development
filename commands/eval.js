@@ -18,11 +18,8 @@ module.exports.run = async (bot, message, args) => {
       if (typeof evaled !== "string")
         evaled = require("util").inspect(evaled);
  
-      message.channel.send(clean(evaled), {code:"xl"});
-    } catch (err) {
-      message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
-    }
-    const client = bot;
+      //message.channel.send(clean(evaled), {code:"xl"});
+      const client = bot;
     message.channel.send({embed: {
     color: 3447003,
     description: "\n",
@@ -38,6 +35,9 @@ module.exports.run = async (bot, message, args) => {
     }
   }
 });
+    } catch (err) {
+      message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
+    }
   } else {message.reply("error! You do not have permission to use this command! You need to be a bot developer to use this command!")}
 }
 
