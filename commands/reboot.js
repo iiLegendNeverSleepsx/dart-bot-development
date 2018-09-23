@@ -5,6 +5,7 @@ module.exports.run = async (bot, message, args) => {
                  bot.destroy();
                  bot.login(process.env.BOT_T0KEN);
                  console.log("${bot.user.tag} has successfully rebooted!");
+	         message.channel.send("All done, I have rebooted my systems!")
 	}
 };    
 
