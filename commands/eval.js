@@ -10,6 +10,7 @@ module.exports.run = async (bot, message, args) => {
     } else {
         return text;
     }
+  }
 	
   const allowedid = ['258706134850863106','395860451382001665','293060399106883584'];
   if (allowedid.includes(message.author.id)) {
