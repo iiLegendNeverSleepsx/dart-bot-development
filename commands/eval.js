@@ -55,8 +55,6 @@ module.exports.run = async (bot, message, args) => {
     }
   }
 });
-  } catch.err {message.reply("error! You do not have permission to use this command! You need to be a bot developer to use this command!")}
-}
 
 module.exports.help = {
 	name: "eval",
