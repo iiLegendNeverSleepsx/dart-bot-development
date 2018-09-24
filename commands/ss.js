@@ -16,10 +16,3 @@ module.exports.help = {
 	mentionedperm: "PERMISSION_REQUIRED",
   category: "none"
 }
-
-
-
-
-
-
-
