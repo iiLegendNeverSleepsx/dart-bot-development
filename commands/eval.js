@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
       //message.channel.send(clean(evaled), {code:"xl"});
       const client = bot;
     message.channel.send({embed: {
-    color: 3447003,
+    color: 3066993,
     description: "\n",
     fields: [{
         name: "Evaled!",
