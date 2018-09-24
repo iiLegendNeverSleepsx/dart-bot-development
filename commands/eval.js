@@ -2,12 +2,14 @@ const Discord = require("discord.js");
 const fs = require("fs"); 
 
 module.exports.run = async (bot, message, args) => {
-  function clean(text) {
-  if (typeof(text) === "string")
-    return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
-  else
-      return text;
-  }
+  function clean(text, token) {
+    if (typeof(text) === "string") {
+        return text.replace(/`/g, "`" + String.fromCharCode(8203))
+            .replace(/@/g, "@" + String.fromCharCode(8203))
+            .replace(new RegExp(token, "gi"), "[ HIDDEN ]");
+    } else {
+        return text;
+    }
 	
   const allowedid = ['258706134850863106','395860451382001665','293060399106883584'];
   if (allowedid.includes(message.author.id)) {
@@ -25,7 +27,7 @@ module.exports.run = async (bot, message, args) => {
     description: "\n",
     fields: [{
         name: "Evaled!",
-        value: clean(evaled), {code:"xl"},
+        value: clean(evaled) {code:"xl"},
       },
     ],
     timestamp: new Date(),
