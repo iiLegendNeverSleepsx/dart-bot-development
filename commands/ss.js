@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
 			message.reply(":white_check_mark: All set!").catch(() => bot.safeSend(message, module.exports.help.name));
 		}).catch(() => {
 			message.reply(":x: Couldn't change the status!").catch(() => bot.safeSend(message, module.exports.help.name));
-		};
+		});
 	}
 
 module.exports.help = {
