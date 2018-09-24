@@ -44,7 +44,7 @@ module.exports.run = async (bot, message, args) => {
     description: "\n",
     fields: [{
         name: "Error!",
-        value: `$(``ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
+        value: `$(``ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``;
     }
   } else {message.reply("error! You do not have permission to use this command! You need to be a bot developer to use this command!")}
 }
