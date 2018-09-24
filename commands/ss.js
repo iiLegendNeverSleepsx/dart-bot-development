@@ -6,13 +6,13 @@ module.exports.run = async (bot, message, args) => {
 			message.reply(":white_check_mark: All set!")
       }).catch(() => {
 			message.reply(":x: Couldn't change the status!")
-}
+})
 
 module.exports.help = {
-	name: "Command name.",
-	usage: "Command usage.",
-	description: "A description found in the ;help embed.",
-	longdes: "A description that is found in ;help <command>",
+	name: "ss",
+	usage: "s",
+	description: "Set's the bots playing status.",
+	longdes: "Different status, online, idle, dnd, and invisible!",
 	mentionedperm: "PERMISSION_REQUIRED",
   category: "none"
 }
