@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
 		}).catch(() => {
 			message.reply(":x: Couldn't change the status!").catch(() => bot.safeSend(message, module.exports.help.name));
 		});
-	},
+	}
 
 module.exports.help = {
 	name: "ss",
