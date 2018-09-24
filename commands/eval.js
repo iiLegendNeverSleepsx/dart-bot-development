@@ -54,8 +54,7 @@ module.exports.run = async (bot, message, args) => {
       text: `Eval ran by ${message.author.tag}`
     }
   }
-});
-
+};
 module.exports.help = {
 	name: "eval",
 	usage: "eval <code>",
