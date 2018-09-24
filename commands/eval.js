@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
       //message.channel.send(clean(evaled), {code:"xl"});
       const client = bot;
     message.channel.send({embed: {
-    color: 3066993,
+    color: 3447003,
     description: "\n",
     fields: [{
         name: "Evaled!",
@@ -39,14 +39,9 @@ module.exports.run = async (bot, message, args) => {
   }
 });
     } catch (err) {
-    message.channel.send({embed: {
-    color: 15158332,
-    description: "\n",
-    fields: [{
-        name: "Error!",
-        value: `$(``ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``,
+      message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
     }
-   else {message.reply("error! You do not have permission to use this command! You need to be a bot developer to use this command!")}
+  } else {message.reply("error! You do not have permission to use this command! You need to be a bot developer to use this command!")}
 }
 
 module.exports.help = {
