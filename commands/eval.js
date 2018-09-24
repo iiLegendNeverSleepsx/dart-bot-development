@@ -28,7 +28,7 @@ module.exports.run = async (bot, message, args) => {
     description: "\n",
     fields: [{
         name: "Evaled!",
-        value: `${clean(evaled), {code:"xl"}};`,
+        value: `${`\`\`\`js\n${clean(evaled, bot.token).substring(0, 500)}\`\`\``}`,
       },
     ],
     timestamp: new Date(),
