@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
 			message.reply(":white_check_mark: All set!")
       }).catch(() => {
 			message.reply(":x: Couldn't change the status!")
-}
+}))
 
 module.exports.help = {
 	name: "ss",
