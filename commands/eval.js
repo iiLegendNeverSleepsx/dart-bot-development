@@ -39,8 +39,22 @@ module.exports.run = async (bot, message, args) => {
   }
 });
     } catch (err) {
-      message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
+    const client = bot;
+    message.channel.send({embed: {
+    color: 15158332,
+    description: "\n",
+    fields: [{
+        name: "Error!",
+        value: `${`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``}`,
+      },
+    ],
+    timestamp: new Date(),
+    footer: {
+      icon_url: message.author.avatarURL,
+      text: `Eval ran by ${message.author.tag}`
     }
+  }
+});
   } else {message.reply("error! You do not have permission to use this command! You need to be a bot developer to use this command!")}
 }
 
