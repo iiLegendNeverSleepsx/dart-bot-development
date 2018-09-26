@@ -40,7 +40,7 @@ module.exports.run = async (bot, message, args) => {
 });
     } catch (err) {
       message.channel.send({embed: {
-    color: "f44242",
+    color: 244066066,
     description: "\n",
     fields: [{
         name: "Error!",
