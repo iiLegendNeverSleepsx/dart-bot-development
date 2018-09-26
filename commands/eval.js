@@ -44,7 +44,7 @@ module.exports.run = async (bot, message, args) => {
     description: "\n",
     fields: [{
         name: "Error!",
-        value: `\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\`}`,
+        value: (`\`\`\`x1\n${clean(err, bot.token)}\`\`\``)
       },
     ],
     timestamp: new Date(),
