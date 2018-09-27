@@ -15,5 +15,5 @@ module.exports.help = {
 	description: "sends a message as the bot",
 	longdes: "Sends the message given in the command as the bot.",
 	mentionedperm: "MANAGE_MESSAGES",
-  category: "Moderation"
+  category: "Utility"
 }
