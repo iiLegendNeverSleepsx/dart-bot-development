@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.help = {
 	name: "vckick",
-	usage: ";vckick <user>",
+	usage: "vckick <user>",
 	description: "nil",
 	longdes: "Removes a user from any voice channel.",
 	mentionedperm: "MOVE_MEMBERS",
