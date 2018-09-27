@@ -28,7 +28,7 @@ client.on("message", async message => {
 
 	if (message.author.bot) return;
 
-	const prefixes = ['+', `<@!?${client.user.id}> `];
+	const prefixes = [';', `<@!?${client.user.id}> `];
 	let prefix = false;
   	for(const thisPrefix of prefixes) {
     		if(message.content.startsWith(thisPrefix)) prefix = thisPrefix;
