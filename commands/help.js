@@ -79,11 +79,11 @@ message.author.send({embed: {
     description: "Commands for Dart Bot",
     fields: [{
         name: "Moderation",
-        value: "`;warn` - Warns the user given. \n`;say` - Sends a message as the bot. \n`;purge` - Clears the amount of messages given. \n`;kick` - Kicks the user given. \n`;ban` - Bans the user given. \n`;nick` - Sets the nickname for the desired user."
+        value: "`;warn` - Warns the user given. \n`;purge` - Clears the amount of messages given. \n`;kick` - Kicks the user given. \n`;ban` - Bans the user given. \n`;nick` - Sets the nickname for the desired user."
       },
       {
         name: "Utility",
-        value: "`;ping` - Displays ping. \n`;help` - Shows this menu."
+        value: "`;ping` - Displays ping. \n`;say` - Sends a message as the bot. \n`;help` - Shows this menu."
       },
       {
         name: "Developer Commands",
