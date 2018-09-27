@@ -28,9 +28,13 @@ client.on("message", async message => {
 
 	if (message.author.bot) return;
 
-	let prefix = ";";
+	const prefixes = [';', `<@!?${client.user.id}> `];
+	let prefix = false;
+  	for(const thisPrefix of prefixes) {
+    		if(message.content.startsWith(thisPrefix)) prefix = thisPrefix;
+  	}
 	
-	if(message.content.indexOf(prefix) !== 0) return;
+  	if(!prefix) return;
 	
 	
 	let messageArray = message.content.split(" ");
