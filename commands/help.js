@@ -28,7 +28,7 @@ if (command && `../commands/` + command + `.js`) {
 	fs.readdir("./commands", (err, files) => {
 		let props = require(`../commands/${command}`);
 		message.channel.send({embed: {
-    			color: 3447003,
+    			color: 15105570,
     			author: {
       			name: bot.user.username,
       			icon_url: bot.user.avatarURL
@@ -70,7 +70,7 @@ if (command && `../commands/` + command + `.js`) {
 });})
 } else {message.channel.send("I sent a direct message of the help menu! If you did not get it, enable `Direct Messages from Server Members` and try again.");
 message.author.send({embed: {
-    color: 3447003,
+    color: 15105570,
     author: {
       name: bot.user.username,
       icon_url: bot.user.avatarURL
@@ -106,7 +106,7 @@ message.author.send({embed: {
 	
  if (allowedid.includes(message.author.id)) {
  message.author.send({embed: {
-    color: 3447003,
+    color: 3066993,
     author: {
       name: bot.user.username,
       icon_url: bot.user.avatarURL
