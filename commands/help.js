@@ -28,7 +28,7 @@ if (command && `../commands/` + command + `.js`) {
 	fs.readdir("./commands", (err, files) => {
 		let props = require(`../commands/${command}`);
 		message.channel.send({embed: {
-    			color: 15105570,
+    			color: 1752220,
     			author: {
       			name: bot.user.username,
       			icon_url: bot.user.avatarURL
