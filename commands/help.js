@@ -106,7 +106,7 @@ message.author.send({embed: {
 	
  if (allowedid.includes(message.author.id)) {
  message.author.send({embed: {
-    color: 3066993,
+    color: 15158332,
     author: {
       name: bot.user.username,
       icon_url: bot.user.avatarURL
