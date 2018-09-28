@@ -3,7 +3,7 @@ const fs = require("fs");
 
 module.exports.run = async (bot, message, args) => {
     message.channel.send({embed: {
-    color: 3447003,
+    color: 3426654,
     author: {
       name: bot.user.username,
       icon_url: bot.user.avatarURL
