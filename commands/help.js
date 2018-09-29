@@ -3,7 +3,6 @@ const fs = require("fs");
 var embedutility = ``;
 var embedmoderation = ``;
 var embeddev = ``;
-var embedpremium = ``;
 
 module.exports.run = async (bot, message, args) => {	
  fs.readdir("./commands", (err, files) => {
@@ -17,12 +16,11 @@ module.exports.run = async (bot, message, args) => {
 		let props = require(`../commands/${f}`);
 		if (props.help.category === "Utility") {
 			embedutility = embedutility + ` \n ;${props.help.name} - ${props.help.description}`
-		if (props.help.category === "Premium") {
-		embedpremium = embedpremium + ` \n ;${props.help.name} - ${props.help.description}`
 		} else if (props.help.category === "Moderation") {
 			embedmoderation = embedmoderation + ` \n ;${props.help.name} - ${props.help.description}`
 		}
-	};
+	});
+ })
 
 const command = args.shift();
 
@@ -88,10 +86,6 @@ message.author.send({embed: {
         value: "`;ping` - Replies with the bots ping. \n`;say` - Sends a message as the bot. \n`;help` - Shows this help menu."
       },
       {
-	name: "Premium",
-        value: "`Soon to come!`"
-      },
-      {      
         name: "Developer Commands",
         value: "Developer commands are not shown to the public right now."
       },
@@ -136,7 +130,7 @@ message.author.send({embed: {
   }
 });}}
 	
-})
+}
 
 module.exports.help = {
 	name: "help",
