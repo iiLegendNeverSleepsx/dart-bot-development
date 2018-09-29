@@ -23,7 +23,6 @@ module.exports.run = async (bot, message, args) => {
 			embedmoderation = embedmoderation + ` \n ;${props.help.name} - ${props.help.description}`
 		}
 	};
- }
 
 const command = args.shift();
 
