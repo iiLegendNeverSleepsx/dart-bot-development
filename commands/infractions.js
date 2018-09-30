@@ -45,7 +45,7 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-	name: "warn",
+	name: "infractions",
 	usage: "infractions [user]",
 	description: "nil",
 	longdes: "Views a user's infractions.",
