@@ -6,7 +6,6 @@ module.exports.run = async (bot, message, args) => {
 	let wUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
 	if (!wUser) wUser = message.author;
 
-	warns[wUser.id].warns++;
 
    message.channel.send({embed: {
     color: 15844367,
@@ -18,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
     description: "\n",
     fields: [{
         name: "Number of Infractions",
-        value: warns[wUser.id],
+        value: `${warns[wUser.id]}`,
         inline: true
       },
       {
