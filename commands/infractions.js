@@ -8,9 +8,7 @@ module.exports.run = async (bot, message, args) => {
 
 	warns[wUser.id].warns++;
 
-	fs.writeFile("./infractions.json", JSON.stringify(warns));
-	message.channel.send(`**${message.author.username}** warned <@${wUser.id}> because of **${reason}**. (Infractions for user: ${warns[wUser.id].warns})`);
-  message.channel.send({embed: {
+   message.channel.send({embed: {
     color: 15844367,
     author: {
       name: client.user.username,
