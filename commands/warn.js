@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
 
 	fs.writeFile("./infractions.json", JSON.stringify(warns));
 	message.channel.send(`**${message.author.username}** warned <@${wUser.id}> because of **${reason}**. (Infractions for user: ${warns[wUser.id].warns})`);
-	wUser.send(`You have been warned in **${message.guild.name}** for **${reason}**.`)
+	wUser.send(`You have been warned in **${message.guild.name}** for **${reason}**.`);
 	
 }
 
