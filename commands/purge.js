@@ -4,8 +4,7 @@ const fs = require("fs");
 module.exports.run = async (bot, message, args) => {
   if (message.member.hasPermission("MANAGE_MESSAGES")) {
   const count = args.shift();
-  message.delete();
-  message.channel.bulkDelete(count).then(() => {
+  message.channel.bulkDelete(count + 1).then(() => {
   message.channel.send(`Deleted **${count}** messages!`).then(msg => msg.delete(3000));
 });
   } else {message.reply("error! You do not have permission to use this command! You need the `MANAGE_MESSAGES` permission!")}
