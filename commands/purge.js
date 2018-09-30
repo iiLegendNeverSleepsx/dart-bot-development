@@ -6,6 +6,7 @@ module.exports.run = async (bot, message, args) => {
   const count = args.shift();
   message.channel.bulkDelete(count).then(() => {
   message.channel.send(`Deleted **${count}** messages!`).then(msg => msg.delete(3000));
+  message.delete()
 });
   } else {message.reply("error! You do not have permission to use this command! You need the `MANAGE_MESSAGES` permission!")}
 }
