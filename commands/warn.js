@@ -28,5 +28,5 @@ module.exports.help = {
 	description: "warns a user",
 	longdes: "Warns the user given along with a reason.",
 	mentionedperm: "MANAGE_MESSAGES",
-  category: "Utility"
+  category: "Moderation"
 }
