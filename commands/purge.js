@@ -4,7 +4,7 @@ const fs = require("fs");
 module.exports.run = async (bot, message, args) => {
   if (message.member.hasPermission("MANAGE_MESSAGES")) {
   const count = args.shift();
-  const newcount = count + 1
+  const newcount = Number(count) + 1;
   message.channel.bulkDelete(newcount).then(() => {
   message.channel.send(`Deleted **${count}** messages!`).then(msg => msg.delete(3000));
 });
