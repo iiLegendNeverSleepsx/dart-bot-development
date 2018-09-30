@@ -11,10 +11,11 @@ module.exports.run = async (bot, message, args) => {
     
     let reason = args.slice(1).join(' ');
     if(!reason) reason = "";
+    let nnick = "";
+    if(!reason) {message.channel.send(`${member.user.tag}'s nickname successfully cleared!`);} else {message.channel.send(`${member.user.tag}'s nickname successfully set to **${reason}**!`);}
     
     await member.setNickname(reason)
       .catch(error => message.reply(`sorry ${message.author}, I couldn't nickname because of : ${error}`));
-    message.channel.send(`${member.user.tag}'s nickname successfully set to **${reason}**!`);
 }
 
 module.exports.help = {
