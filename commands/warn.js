@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const fs = require("fs");
+const fs = require("fs"); 
 let warns = JSON.parse(fs.readFileSync("./infractions.json","utf8"));
 
 module.exports.run = async (bot, message, args) => {
