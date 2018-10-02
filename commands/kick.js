@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args) => {
     if(!reason) reason = "No reason provided";
     
     await member.kick(reason)
-      .catch(error => message.reply(`sorry ${message.author}, I couldn't kick because of: ${error}`));
+      .catch(error => message.reply(`sorry ${message.author}, I couldn't kick because of : ${error}`));
     message.reply(`${member.user.tag} has been kicked by ${message.author.tag} because: ${reason}`);
 }
 
