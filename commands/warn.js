@@ -10,6 +10,8 @@ module.exports.run = async (bot, message, args) => {
 	let reaso = args.shift();
 	let reason = args.join(" ");
 
+	if (!reason) {reason = "*No reason specified.*"}
+	
 	if (!warns[wUser.id]) warns[wUser.id] = {
 		warns: 0 
 	}
