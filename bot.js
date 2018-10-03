@@ -68,7 +68,7 @@ client.on("message", async message => {
     				description: "\n",
     				fields: [{
     				    name: "Set New Status",
-   				    value: "What **game** would you like my status to be?"
+   				    value: "What **game** would you like my status to be? \n\nState your answer to continue. \nSay **cancel** to cancel."
  		 		    },
   				],
 				}
@@ -83,7 +83,7 @@ client.on("message", async message => {
     				description: "\n",
     				fields: [{
     				    name: "Set New Status",
-   				    value: "What **state** would you like me to be in? Please say `online`, `idle`, `dnd`, or `invisible`."
+   				    value: "What **state** would you like me to be in? Please say `online`, `idle`, `dnd`, or `invisible`. \n\nState your answer to continue. \nSay **cancel** to cancel."
  		 		    },
   				],
 				}
