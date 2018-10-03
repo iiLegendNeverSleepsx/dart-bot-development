@@ -90,7 +90,7 @@ client.on("message", async message => {
 			});
 			} else {
 			message.channel.send({embed: {
-    				color: 130255146,
+    				color: 3066993,
     				description: "\n",
     				fields: [{
     				    name: "Set New Status",
