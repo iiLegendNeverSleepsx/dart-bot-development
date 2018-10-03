@@ -63,7 +63,7 @@ client.on("message", async message => {
 			sspo = false;
 			message.channel.send("Cancelled prompt.");
 		} else {
-		if (sspod === true) {ssps = 2; ssstatus = messageArray.join(" "))}
+		if (sspod === true) {ssps = 2; ssstatus = messageArray.join(" ")}
 		if (ssps === 1) {
 			sspod = true
 			message.channel.send({embed: {
