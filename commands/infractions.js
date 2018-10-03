@@ -1,8 +1,7 @@
-const Discord = require("discord.js");
-const fs = require("fs");
-let warns = JSON.parse(fs.readFileSync("./infractions.json","utf8"));
+import { readFileSync } from "fs";
+let warns = JSON.parse(readFileSync("./infractions.json","utf8"));
 
-module.exports.run = async (bot, message, args) => {
+export async function run(bot, message, args) {
 	const client = bot;
 	let wUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
 	if (!wUser) wUser = message.author;
@@ -17,7 +16,13 @@ module.exports.run = async (bot, message, args) => {
     title: "Infractions",
     description: `Viewing infractions for user **${wUser.tag}**.`,
     fields: [{
-        name: "Number of Infractions",
+        _name: "Number of Infractions",
+        get name() {
+            return this._name;
+        },
+        set name(value) {
+            this._name = value;
+        },
         value: `${warns[wUser.id]}`,
         inline: true
       },
@@ -42,7 +47,7 @@ module.exports.run = async (bot, message, args) => {
 	
 }
 
-module.exports.help = {
+export const help = {
 	name: "infractions",
 	usage: "infractions [user]",
 	description: "nil",
