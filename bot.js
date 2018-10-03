@@ -53,6 +53,13 @@ client.on("message", async message => {
 	}
 	
 	if (sspo === true && sspuid === message.author.id) {
+		if (cmd === 'cancel') {
+			sspuid = 0;
+			ssps = 1;
+			sspod = false;
+			sspo = false;
+			message.channel.send("Cancelled prompt.");
+		} else {
 		if (sspod === true) {ssps = 2}
 		if (ssps === 1) {
 			sspod = true
@@ -70,7 +77,7 @@ client.on("message", async message => {
 		
 		if (ssps === 2) {
 			const allowedans = ['online','idle','dnd','invisible'];
-			if (!allowedans.includes(args[0])) {
+			if (!allowedans.includes(cmd)) {
 			message.channel.send({embed: {
     				color: 15844367,
     				description: "\n",
@@ -97,7 +104,7 @@ client.on("message", async message => {
 			sspod = false;
 			sspo = false;
 			}
-		}
+		}}
 	} else {
 	
 	if(!prefix) return;
