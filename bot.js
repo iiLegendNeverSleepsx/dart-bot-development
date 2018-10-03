@@ -39,8 +39,6 @@ client.on("message", async message => {
     		if(message.content.startsWith(thisPrefix)) prefix = thisPrefix;
   	}
 	
-  	if(!prefix) return;
-	
 	let messageArray = message.content.split(" ");
 	let cmd = messageArray.shift();
 	let args = messageArray
@@ -102,6 +100,8 @@ client.on("message", async message => {
 		}
 	} else {
 	
+	if(!prefix) return;
+		
 	let commandfile = client.commands.get(cmd.slice(prefix.length));
 	if (commandfile) commandfile.run(client,message,args);
 	
