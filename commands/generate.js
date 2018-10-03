@@ -26,14 +26,16 @@ const allowedid = ['258706134850863106','395860451382001665','293060399106883584
         }
         return res;
     }
-    function Config(config) {
-        config = config || {};
-        this.count = config.count || 1;
-        this.length = config.length || 8;
-        this.charset = config.charset || charset("alphanumeric");
-        this.prefix = config.prefix || "";
-        this.postfix = config.postfix || "";
-        this.pattern = config.pattern || repeat("#", this.length);
+    class Config {
+        constructor(config) {
+            config = config || {};
+            this.count = config.count || 1;
+            this.length = config.length || 8;
+            this.charset = config.charset || charset("alphanumeric");
+            this.prefix = config.prefix || "";
+            this.postfix = config.postfix || "";
+            this.pattern = config.pattern || repeat("#", this.length);
+        }
     }
     function generateOne(config) {
         var code = config.pattern.split('').map(function(char) {
@@ -83,4 +85,4 @@ module.exports.help = {
 	longdes: "code generation",
 	mentionedperm: "DEVELOPER",
   category: "Developer"
-}
+}}
