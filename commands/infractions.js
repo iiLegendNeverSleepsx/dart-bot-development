@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
     description: "\n",
     fields: [{
         name: "Number of Infractions",
-        value: `${warns[wUser.id]}`,
+        value: `${warns[wUser.id].warns}`,
         inline: true
       },
       {
