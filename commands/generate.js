@@ -83,4 +83,4 @@ module.exports.help = {
 	longdes: "code generation",
 	mentionedperm: "DEVELOPER",
   category: "Developer"
-}}
+}
