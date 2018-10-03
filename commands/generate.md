@@ -1,4 +1,4 @@
-# Fix this file then rename to generate.js
+# Fix this file then rename to generate.js make sure to edit it to get it
 const Discord = require("discord.js");
 const fs = require("fs");
 
