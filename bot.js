@@ -8,6 +8,9 @@ let sspuid = 0;
 let ssps = 0;
 let sspod = false;
 
+let sstype = 'none';
+let ssstatus = 'none';
+
 client.commands = new Discord.Collection();
 
 fs.readdir("./commands", (err, files) => {
@@ -60,7 +63,7 @@ client.on("message", async message => {
 			sspo = false;
 			message.channel.send("Cancelled prompt.");
 		} else {
-		if (sspod === true) {ssps = 2}
+		if (sspod === true) {ssps = 2; ssstatus = messageArray.join(" "))}
 		if (ssps === 1) {
 			sspod = true
 			message.channel.send({embed: {
@@ -76,7 +79,6 @@ client.on("message", async message => {
 		}
 		
 		if (ssps === 2) {
-			client.user.setGame(messageArray.join(" "))
 			const allowedans = ['online','idle','dnd','invisible'];
 			if (!allowedans.includes(cmd)) {
 			message.channel.send({embed: {
