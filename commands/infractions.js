@@ -1,14 +1,21 @@
-import { readFileSync } from "fs";
-let warns = JSON.parse(readFileSync("./infractions.json","utf8"));
+const Discord = require("discord.js");
+const fs = require("fs");
+let warns = JSON.parse(fs.readFileSync("./infractions.json","utf8"));
 
-export async function run(bot, message, args) {
+module.exports.run = async (bot, message, args) => {
 	const client = bot;
 	let wUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
 	if (!wUser) wUser = message.author;
 
 
    message.channel.send({embed: {
-    color: 15844367,
+       _color: 15844367,
+       get color() {
+           return this._color;
+       },
+       set color(value) {
+           this._color = value;
+       },
     author: {
       name: client.user.username,
       icon_url: client.user.avatarURL
@@ -16,13 +23,7 @@ export async function run(bot, message, args) {
     title: "Infractions",
     description: `Viewing infractions for user **${wUser.tag}**.`,
     fields: [{
-        _name: "Number of Infractions",
-        get name() {
-            return this._name;
-        },
-        set name(value) {
-            this._name = value;
-        },
+        name: "Number of Infractions",
         value: `${warns[wUser.id]}`,
         inline: true
       },
@@ -47,7 +48,7 @@ export async function run(bot, message, args) {
 	
 }
 
-export const help = {
+module.exports.help = {
 	name: "infractions",
 	usage: "infractions [user]",
 	description: "nil",
