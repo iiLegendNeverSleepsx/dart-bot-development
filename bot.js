@@ -76,6 +76,7 @@ client.on("message", async message => {
 		}
 		
 		if (ssps === 2) {
+			client.user.setGame(messageArray.join(" "))
 			const allowedans = ['online','idle','dnd','invisible'];
 			if (!allowedans.includes(cmd)) {
 			message.channel.send({embed: {
@@ -99,6 +100,7 @@ client.on("message", async message => {
   				],
 				}
 			});
+			client.user.setStatus(cmd)
 			sspuid = 0;
 			ssps = 1;
 			sspod = false;
