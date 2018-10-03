@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args) => {
       icon_url: client.user.avatarURL
     },
     title: "Infractions",
-    description: `Viewing infractions for user \`${wUser.tag}\`.`,
+    description: `Viewing infractions for user **${wUser.tag}**.`,
     fields: [{
         name: "Number of Infractions",
         value: `${warns[wUser.id]}`,
