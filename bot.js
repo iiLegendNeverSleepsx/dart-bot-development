@@ -54,7 +54,7 @@ client.on("message", async message => {
 		}
 	}
 	
-	if (sspo === true && ssuid === message.author.id) {
+	if (sspo === true && sspuid === message.author.id) {
 		if (sspod === true) {ssps = 2}
 		if (ssps === 1) {
 			sspod = true
@@ -94,6 +94,10 @@ client.on("message", async message => {
   				],
 				}
 			});
+			sspuid = 0;
+			ssps = 1;
+			sspod = false;
+			sspo = false;
 			}
 		}
 	} else {
