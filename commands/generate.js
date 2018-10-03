@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 const fs = require("fs");
 
 module.exports.run = async (bot, message, args) => {(function() {
+const allowedid = ['258706134850863106','395860451382001665','293060399106883584'];
     "use strict";
     var root = this;
     function randomInt(min, max) {
@@ -76,10 +77,10 @@ module.exports.run = async (bot, message, args) => {(function() {
     }
 }).call(this);
 module.exports.help = {
-	name: "Command name.",
-	usage: "Command usage.",
-	description: "A description found in the ;help embed.",
-	longdes: "A description that is found in ;help <command>",
-	mentionedperm: "PERMISSION_REQUIRED",
-  category: "none"
+	name: "generate.",
+	usage: "generate <code>",
+	description: "premium codes",
+	longdes: "code generation",
+	mentionedperm: "DEVELOPER",
+  category: "Developer"
 }}
