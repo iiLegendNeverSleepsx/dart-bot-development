@@ -52,7 +52,8 @@ client.on("message", async message => {
 			sspo = true;
 			sspuid = message.author.id;
 			ssps = 1;
-		}
+		} else {
+			message.reply("you're not allowed to use this command! Only the developers of the bot can use it.")
 	}
 	
 	if (sspo === true && sspuid === message.author.id) {
