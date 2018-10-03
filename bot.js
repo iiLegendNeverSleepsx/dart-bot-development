@@ -50,7 +50,7 @@ client.on("message", async message => {
 		if (allowids.includes(message.author.id)) {
 			sspo = true;
 			sspuid = message.author.id;
-			ssps = 0;
+			ssps = 1;
 		}
 	}
 	
