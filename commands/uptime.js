@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
     title: "\n",
     description: "\n",
     fields: [{
-        name: "client.user.username's Uptime",
+        name: "Dart Bot's Uptime",
         value: uptime,
         inline: true
       },
