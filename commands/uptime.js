@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
     
     let uptime = `${hours}h ${minutes}m ${seconds}s`;
     message.channel.send({embed: {
-    color: 15105570,
+    color: 15158332,
     author: {
       name: client.user.username,
       icon_url: client.user.avatarURL
