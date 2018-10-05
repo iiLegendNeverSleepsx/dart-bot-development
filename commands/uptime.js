@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
     
     let uptime = `${hours}h ${minutes}m ${seconds}s`;
     message.channel.send({embed: {
-    color: 15844367,
+    color: 1752220,
     author: {
       name: client.user.username,
       icon_url: client.user.avatarURL
@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
     title: "Uptime",
     description: "\n",
     fields: [{
-        name: "Uptime",
+        name: "Dart Bot's Uptime",
         value: uptime,
         inline: true
       },
