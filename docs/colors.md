@@ -1,5 +1,6 @@
 # Embed Colors
 > Use this for embed colors.
+
 DEFAULT: 0,
 AQUA: 1752220,
 GREEN: 3066993,
