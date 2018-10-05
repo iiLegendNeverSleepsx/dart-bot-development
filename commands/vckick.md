@@ -1,3 +1,4 @@
+#premium command
 const Discord = require("discord.js");
 const fs = require("fs");
 
@@ -13,3 +14,7 @@ module.exports.help = {
 	mentionedperm: "MOVE_MEMBERS",
   category: "Moderation"
 }
+
+
+
+"will do later"
