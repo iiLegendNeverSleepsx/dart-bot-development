@@ -1,5 +1,5 @@
 # Embed Colors
-> Use this for embed colors.
+> Use this for embed colors, make sure to edit it to get the color.
 
 DEFAULT: 0,
 AQUA: 1752220,
