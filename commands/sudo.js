@@ -15,8 +15,10 @@ module.exports.run = async (bot, message, args) => {
 	  
 	 let newuser = message.guild.members.get(`${wUser.id}`):
 	 
+	 let msgg = message.channel.messages.get(args.shift());
+	 
 	let commandfile = client.commands.get(cmd);
-	if (commandfile) commandfile.run(client,,nargs);
+	if (commandfile) commandfile.run(client,msgg,nargs);
 	
   }
 }
