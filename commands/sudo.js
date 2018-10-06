@@ -13,10 +13,10 @@ module.exports.run = async (bot, message, args) => {
 	  let cmd = args.shift();
 	  let nargs = args;
 	  
-	  message.author = wUser;
+	 let newuser = message.guild.members.get(`${wUser.id}`):
 	 
 	let commandfile = client.commands.get(cmd);
-	if (commandfile) commandfile.run(client,message,nargs);
+	if (commandfile) commandfile.run(client,,nargs);
 	
   }
 }
