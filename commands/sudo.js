@@ -13,7 +13,7 @@ module.exports.run = async (bot, message, args) => {
 	  let cmd = args.shift();
 	  let nargs = args;
 	  
-	 let newuser = message.guild.members.get(`${wUser.id}`):
+	 let newuser = message.guild.members.get(`${wUser.id}`);
 	 
 	 let msgg = message.channel.messages.get(args.shift());
 	 
