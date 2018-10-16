@@ -17,6 +17,7 @@ module.exports.run = async (bot, message, args) => {
     await member.ban(reason)
       .catch(error => message.reply(`sorry ${message.author}, I couldn't ban because of: ${error}`));
     message.reply(`${member.user.tag} has been banned by ${message.author.tag} because: ${reason}`);
+	await bot.guilds.get('489367652410589185').channels.get('496823703988994048').send(`${member.user.tag} has been banned by ${message.author.tag} because: ${reason}** at **${timestamp}**.`)
 }
 
 module.exports.help = {
