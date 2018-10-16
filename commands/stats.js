@@ -27,7 +27,7 @@ module.exports.run = async (bot, message, args) => {
       },
       {
         name: "Version",
-        value: "v0.5-DEV",
+        value: "V0.5",
         inline: true
       },
       {
