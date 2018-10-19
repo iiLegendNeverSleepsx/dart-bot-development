@@ -4,7 +4,7 @@ const fs = require("fs");
 module.exports.run = async (bot, message, args) => {
     const client = bot;
     
-    let totalSeconds = (client.up / 1000);
+    let totalSeconds = (client.uptime / 1000);
     let hours = Math.floor(totalSeconds / 3600);
     totalSeconds %= 3600;
     let minutes = Math.floor(totalSeconds / 60);
@@ -35,7 +35,7 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-	name: "uptime",
+	name: "up",
 	usage: "up",
 	description: "nil",
 	longdes: "Uptime of bot.",
