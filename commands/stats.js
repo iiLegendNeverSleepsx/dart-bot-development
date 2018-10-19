@@ -42,7 +42,7 @@ module.exports.run = async (bot, message, args) => {
       },
       {
         name: "Memory Usage",
-        value: math.round(process.memoryUsage().heapUsed / 1000000).toString() + "mb", true,
+        value: `math.round(process.memoryUsage().heapUsed / 1000000).toString() + "mb", true`;
         inline: true
       },
       {
