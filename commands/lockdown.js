@@ -9,7 +9,6 @@ module.exports.run = async (bot, message, args) => {
 			await call.client
 				`this.locked.value = ${!call.client.locked.value};` +
 				"this.locked.channels = [];"
-			);
 			call.message.reply(`The client is now ${call.client.locked.value ? "in" : ""}accessible.`);
 		}
 	}
