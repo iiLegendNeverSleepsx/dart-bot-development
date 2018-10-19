@@ -41,6 +41,11 @@ module.exports.run = async (bot, message, args) => {
         inline: true
       },
       {
+        name: "Memory Usage",
+        value: math.round(process.memoryUsage().heapUsed / 1000000).toString() + "mb", true,
+        inline: true
+      },
+      {
         name: "Channels",
         value: client.channels.size,
         inline: true
@@ -55,6 +60,7 @@ module.exports.run = async (bot, message, args) => {
         value: "Dart Bot is a moderation bot (currently) available to all users!",
         inline: false
       },
+	         
       //{
       //  name: "",
       //  value: "",
