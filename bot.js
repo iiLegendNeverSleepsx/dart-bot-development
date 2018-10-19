@@ -38,7 +38,7 @@ client.on("message", async message => {
 
   if (message.channel.id === '502741169747525645') {if (message.content != '.') {message.delete()}}
 	
-	const prefixes = [';', '<@491345635962781696>', 'd;;', 'd;'];
+	const prefixes = [';', '<@491345635962781696> ', 'd;;', 'd;'];
 	let prefix = false;
   	for(const thisPrefix of prefixes) {
     		if(message.content.startsWith(thisPrefix)) prefix = thisPrefix;
