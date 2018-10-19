@@ -36,7 +36,7 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.help = {
 	name: "uptime",
-	usage: "uptime",
+	usage: "up",
 	description: "nil",
 	longdes: "Uptime of bot.",
 	mentionedperm: "None",
