@@ -3,19 +3,19 @@ const fs = require("fs");
 
 module.exports.run = async (bot, message, args) => {
     if(!message.member.hasPermission("BAN_MEMBERS") || !message.member.hasPermission("ADMINISTRATOR"))
-      return message.reply("\n Insufficent permissions! You need to have the `BAN_MEMBERS` permission!");
+      return message.reply("\nInsufficent permissions! You need to have the `BAN_MEMBERS` permission!");
     
     let member = message.mentions.members.first() || message.guild.members.get(args[0]);
     if(!member)
-      return message.reply("please mention a valid member of this server!");
+      return message.reply("\nPlease mention a valid member of this server!");
     if(!member.kickable) 
       return message.reply("I cannot ban this user! Do they have a higher role? **Do I have ban permissions**?");
     
     let reason = args.slice(1).join(' ');
-    if(!reason) reason = "no reason provided";
+    if(!reason) reason = "No reason provided";
     
     await member.ban(reason)
-      .catch(error => message.reply(`sorry ${message.author}, I couldn't ban because of: ${error}`));
+      .catch(error => message.reply(`\nSorry ${message.author}, I couldn't ban because of: ${error}`));
     message.reply(`${member.user.tag} has been banned by ${message.author.tag} because: ${reason}`);
 	await bot.guilds.get('489367652410589185').channels.get('496823703988994048').send(`**${member.user.tag}** has been banned by ${message.author.tag} because of: **${reason}**.`)
 }
