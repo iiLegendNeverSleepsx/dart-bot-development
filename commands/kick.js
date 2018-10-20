@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
     
     let member = message.mentions.members.first() || message.guild.members.get(args[0]);
     if(!member)
-      return message.reply("please mention a valid member of this server!");
+      return message.reply("\nPlease mention a valid member of this server!");
     if(!member.kickable) 
       return message.reply("I cannot kick this user! Do they have a higher role? Do I have kick permissions?");
     
