@@ -3,7 +3,7 @@ const fs = require("fs");
 
 module.exports.run = async (bot, message, args) => {
     if(!message.member.hasPermission("KICK_MEMBERS") || !message.member.hasPermission("ADMINISTRATOR"))
-      return message.reply("insufficent permissions! You need to have the `KICK_MEMBERS` permission!");
+      return message.reply("\nInsufficent permissions! You need to have the `KICK_MEMBERS` permission!");
     
     let member = message.mentions.members.first() || message.guild.members.get(args[0]);
     if(!member)
