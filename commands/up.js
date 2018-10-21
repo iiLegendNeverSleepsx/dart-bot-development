@@ -5,6 +5,7 @@ module.exports.run = async (bot, message, args) => {
     const client = bot;
     
     let totalSeconds = (client.uptime / 1000);
+    let weeks = Math.floor(totalSeconds/604800);
     let days = Math.floor(totalSeconds/86400);
     let hours = Math.floor(totalSeconds / 3600);
     totalSeconds %= 3600;
