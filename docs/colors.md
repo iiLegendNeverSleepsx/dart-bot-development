@@ -1,6 +1,7 @@
 # Embed Colors
 > Use this for embed colors, make sure to edit it to get the color.
 
+```
 DEFAULT: 0,
 AQUA: 1752220,
 GREEN: 3066993,
@@ -22,3 +23,4 @@ DARK_RED: 10038562,
 DARK_GREY: 9936031,
 LIGHT_GREY: 12370112,
 DARK_NAVY: 2899536
+```
