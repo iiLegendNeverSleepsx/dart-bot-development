@@ -33,8 +33,6 @@ client.on("ready", async () => {
 	bot.user.setActivity(';help | 4 guilds!'){ type: 'LISTENING' });
 });
 
-});
-
 client.on("message", async message => {
 
 	if (message.author.bot) return;
