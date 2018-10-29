@@ -30,7 +30,6 @@ fs.readdir("./commands", (err, files) => {
 
 client.on("ready", async () => {
 	console.log(`${client.user.tag} has started!`);
-	bot.user.setActivity(';help | 4 guilds!'){ type: 'LISTENING' });
 });
 
 client.on("message", async message => {
