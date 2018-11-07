@@ -12,6 +12,7 @@ module.exports.run = async (bot, message, args) => {
 	if (!reason) {reason = "*No reason specified.*"}
         message.channel.send(`**${message.author.username}** has warned <@${wUser.id}> because of **${reason}**.`);
 	wUser.send(`You have been warned in **${message.guild.name}** for **${reason}**.`);
+	await bot.guilds.get('489367652410589185').channels.get('509830100615823395').send(`**${wUser.user.tag}** has been warned by ${message.author.tag} because of: **${reason}**.`)
 }
 
 module.exports.help = {
